@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - JTAppleCalendar (8.0.3)
+  - Realm (10.7.6):
+    - Realm/Headers (= 10.7.6)
+  - Realm/Headers (10.7.6)
+  - RealmSwift (10.7.6):
+    - Realm (= 10.7.6)
+  - SwiftHEXColors (1.4.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - JTAppleCalendar
+  - RealmSwift
+  - SwiftHEXColors
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Charts
+    - JTAppleCalendar
+    - Realm
+    - RealmSwift
+    - SwiftHEXColors
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
+  Realm: ed860452717c8db8f4bf832b6807f7f2ce708839
+  RealmSwift: e31c4ddbcc42ac879313d656b86f9ca539f6f4f4
+  SwiftHEXColors: 1cb6e5d55c52749aa33db8f088ac55eb71ca4c7f
+
+PODFILE CHECKSUM: 5a7f627d04a08fbb9689e57d053041df4cd32c54
+
+COCOAPODS: 1.10.1
