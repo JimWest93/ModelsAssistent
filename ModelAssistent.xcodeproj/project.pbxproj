@@ -17,6 +17,10 @@
 		111718642672799F00BFD235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111718622672799F00BFD235 /* Main.storyboard */; };
 		11171866267279A000BFD235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11171865267279A000BFD235 /* Assets.xcassets */; };
 		11171869267279A000BFD235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11171867267279A000BFD235 /* LaunchScreen.storyboard */; };
+		114A534B2713BF56008C467B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A534A2713BF56008C467B /* NavigationViewController.swift */; };
+		114A534D2713C0F4008C467B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A534C2713C0F4008C467B /* UIColorExtension.swift */; };
+		114A53502713C150008C467B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A534F2713C150008C467B /* UIViewControllerExtension.swift */; };
+		114A53522713C1B9008C467B /* StringProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A53512713C1B9008C467B /* StringProtocolExtension.swift */; };
 		116341FF2698159E00422770 /* ChartValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116341FE2698159E00422770 /* ChartValueFormatter.swift */; };
 		116534FF26966E6A00632D65 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116534FE26966E6A00632D65 /* Colors.swift */; };
 		1182A32326D4922C009F3636 /* RatesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182A32226D4922C009F3636 /* RatesLoader.swift */; };
@@ -57,6 +61,10 @@
 		11171865267279A000BFD235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11171868267279A000BFD235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1117186A267279A000BFD235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114A534A2713BF56008C467B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		114A534C2713C0F4008C467B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		114A534F2713C150008C467B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		114A53512713C1B9008C467B /* StringProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtension.swift; sourceTree = "<group>"; };
 		116341FE2698159E00422770 /* ChartValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueFormatter.swift; sourceTree = "<group>"; };
 		116534FE26966E6A00632D65 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1182A32226D4922C009F3636 /* RatesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesLoader.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 		1117185B2672799F00BFD235 /* ModelAssistent */ = {
 			isa = PBXGroup;
 			children = (
+				114A534E2713C113008C467B /* Extensions */,
 				110EF1D626783F5D00AEBD04 /* Model */,
 				11873CB9267817EE00C6CD41 /* View */,
 				11873CB8267817E600C6CD41 /* Controller */,
@@ -142,6 +151,17 @@
 				1117186A267279A000BFD235 /* Info.plist */,
 			);
 			path = ModelAssistent;
+			sourceTree = "<group>";
+		};
+		114A534E2713C113008C467B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				114A534C2713C0F4008C467B /* UIColorExtension.swift */,
+				114A534F2713C150008C467B /* UIViewControllerExtension.swift */,
+				116534FE26966E6A00632D65 /* Colors.swift */,
+				114A53512713C1B9008C467B /* StringProtocolExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1182A32126D49207009F3636 /* Network */ = {
@@ -155,7 +175,6 @@
 		1182A32626D5DAF0009F3636 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				116534FE26966E6A00632D65 /* Colors.swift */,
 				1117185E2672799F00BFD235 /* SceneDelegate.swift */,
 				1117185C2672799F00BFD235 /* AppDelegate.swift */,
 				11171867267279A000BFD235 /* LaunchScreen.storyboard */,
@@ -168,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				11A0C5CD2713B6600026172F /* TabBarViewController.swift */,
+				114A534A2713BF56008C467B /* NavigationViewController.swift */,
 				111718602672799F00BFD235 /* CalendarViewController.swift */,
 				11873CBA2678184000C6CD41 /* SitesEarningsViewController.swift */,
 				110EF1DC26799BB500AEBD04 /* SettingsViewController.swift */,
@@ -336,6 +356,8 @@
 				1117185F2672799F00BFD235 /* SceneDelegate.swift in Sources */,
 				11A5A238268A9BD100BFEA0E /* StatisticsViewController.swift in Sources */,
 				1198D9A92679BA4B000BC7E3 /* AddSiteViewController.swift in Sources */,
+				114A534B2713BF56008C467B /* NavigationViewController.swift in Sources */,
+				114A534D2713C0F4008C467B /* UIColorExtension.swift in Sources */,
 				1182A32326D4922C009F3636 /* RatesLoader.swift in Sources */,
 				110EF1E126799FFF00AEBD04 /* SettingsCell.swift in Sources */,
 				11CB2F3A267E9B89003EF2DA /* ModelPercentage.swift in Sources */,
@@ -344,11 +366,13 @@
 				11CB2F3C267EFE5D003EF2DA /* Earning.swift in Sources */,
 				1198D9A52679A523000BC7E3 /* SitesSettingsViewController.swift in Sources */,
 				11DA56AA267D5F0E0049821C /* Realm.swift in Sources */,
+				114A53502713C150008C467B /* UIViewControllerExtension.swift in Sources */,
 				11873CBB2678184000C6CD41 /* SitesEarningsViewController.swift in Sources */,
 				110EF1D826783F8500AEBD04 /* SitesForTable.swift in Sources */,
 				1198D9A72679A6C3000BC7E3 /* SiteInSettingsCell.swift in Sources */,
 				116341FF2698159E00422770 /* ChartValueFormatter.swift in Sources */,
 				1198D9AB2679C27D000BC7E3 /* ItemsForSiteAdding.swift in Sources */,
+				114A53522713C1B9008C467B /* StringProtocolExtension.swift in Sources */,
 				11873CBD2678186500C6CD41 /* SiteCell.swift in Sources */,
 				1198D9B1267C2559000BC7E3 /* ImageCell.swift in Sources */,
 				1198E9A326D0A5FE00D68FE2 /* DateForCallendar.swift in Sources */,

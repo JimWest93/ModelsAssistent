@@ -7,7 +7,7 @@ protocol PercentageDelegate {
 }
 
 class SettingsViewController: UIViewController {
-
+    
     @IBOutlet weak var settingsTable: UITableView!
     
     var alertControllerPercentage = UIAlertController()
@@ -29,13 +29,6 @@ class SettingsViewController: UIViewController {
         settingsTable.backgroundColor = Color.shared.hex("#A1A5A6")
         view.backgroundColor = Color.shared.hex("#A1A5A6")
         
-        if #available(iOS 15, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        }
-
     }
     
     //защита от введения букв в аллерте процента
@@ -44,7 +37,7 @@ class SettingsViewController: UIViewController {
         if Int(sender.text!) != nil {
             
             alertControllerPercentage.actions.first?.isEnabled = true
-        
+            
         } else { alertControllerPercentage.actions.first?.isEnabled = false }
         
     }
@@ -57,7 +50,7 @@ class SettingsViewController: UIViewController {
         if Double(sender.text!) != nil {
             
             alertControllerExchangeRate.actions.first?.isEnabled = true
-        
+            
         } else { alertControllerExchangeRate.actions.first?.isEnabled = false }
         
     }
@@ -93,7 +86,7 @@ class SettingsViewController: UIViewController {
     
     //алерт контроллер для изменения процента
     func alertControllerPercentageSetup() {
-    
+        
         self.alertControllerPercentage = UIAlertController(title: "Введите процент", message: "Целое число", preferredStyle: .alert)
         self.alertControllerPercentage.addTextField { (textField) in
             textField.keyboardType = .numberPad
@@ -150,6 +143,6 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         default: return
         }
     }
-
+    
     
 }

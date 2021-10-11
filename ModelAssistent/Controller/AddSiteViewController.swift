@@ -350,16 +350,3 @@ extension AddSiteViewController: TypeOfEarningDelegate {
     }
 }
 
-extension AddSiteViewController {
-    
-    func presentDetail(_ viewControllerToPresent: UIViewController) {
-        let transition = CATransition()
-        transition.duration = 0.25
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        self.view.window!.layer.add(transition, forKey: kCATransition)
-        
-        present(viewControllerToPresent, animated: false)
-    }
-}
