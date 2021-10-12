@@ -1,9 +1,7 @@
 import UIKit
 
 protocol PercentageDelegate {
-    
     func percentageUpdate(percentage: Int)
-    
 }
 
 class SettingsViewController: UIViewController {
@@ -108,12 +106,11 @@ class SettingsViewController: UIViewController {
             }
             
             self.settingsTable.reloadData()
-            self.delegate?.percentageUpdate(percentage: newPercentage)
-            print(newPercentage)
+
         }
         
-        alertControllerPercentage.addAction(actionDone)
         alertControllerPercentage.addAction(actionCancel)
+        alertControllerPercentage.addAction(actionDone)
     }
 }
 

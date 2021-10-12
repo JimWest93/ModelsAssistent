@@ -14,7 +14,7 @@
 		1117185D2672799F00BFD235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117185C2672799F00BFD235 /* AppDelegate.swift */; };
 		1117185F2672799F00BFD235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117185E2672799F00BFD235 /* SceneDelegate.swift */; };
 		111718612672799F00BFD235 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111718602672799F00BFD235 /* CalendarViewController.swift */; };
-		111718642672799F00BFD235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111718622672799F00BFD235 /* Main.storyboard */; };
+		111718642672799F00BFD235 /* Main.storyboarda in Resources */ = {isa = PBXBuildFile; fileRef = 111718622672799F00BFD235 /* Main.storyboarda */; };
 		11171866267279A000BFD235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11171865267279A000BFD235 /* Assets.xcassets */; };
 		11171869267279A000BFD235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11171867267279A000BFD235 /* LaunchScreen.storyboard */; };
 		114A534B2713BF56008C467B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A534A2713BF56008C467B /* NavigationViewController.swift */; };
@@ -57,7 +57,7 @@
 		1117185C2672799F00BFD235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1117185E2672799F00BFD235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		111718602672799F00BFD235 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		111718632672799F00BFD235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		111718632672799F00BFD235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = Base.lproj/Main.storyboarda; sourceTree = "<group>"; };
 		11171865267279A000BFD235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11171868267279A000BFD235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1117186A267279A000BFD235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		110EF1D626783F5D00AEBD04 /* Model */ = {
+		110EF1D626783F5D00AEBD04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				11DA56A9267D5F0E0049821C /* Realm.swift */,
@@ -118,7 +118,7 @@
 				1198D9AA2679C27D000BC7E3 /* ItemsForSiteAdding.swift */,
 				1182A32426D49245009F3636 /* Rates.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		111718502672799F00BFD235 = {
@@ -143,9 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				114A534E2713C113008C467B /* Extensions */,
-				110EF1D626783F5D00AEBD04 /* Model */,
-				11873CB9267817EE00C6CD41 /* View */,
-				11873CB8267817E600C6CD41 /* Controller */,
+				110EF1D626783F5D00AEBD04 /* Models */,
+				11F9E47B271554EF0072C8CD /* View */,
+				11873CB9267817EE00C6CD41 /* Cells */,
+				11873CB8267817E600C6CD41 /* Controllers */,
 				1182A32126D49207009F3636 /* Network */,
 				1182A32626D5DAF0009F3636 /* Supporting files */,
 				1117186A267279A000BFD235 /* Info.plist */,
@@ -158,7 +159,6 @@
 			children = (
 				114A534C2713C0F4008C467B /* UIColorExtension.swift */,
 				114A534F2713C150008C467B /* UIViewControllerExtension.swift */,
-				116534FE26966E6A00632D65 /* Colors.swift */,
 				114A53512713C1B9008C467B /* StringProtocolExtension.swift */,
 			);
 			path = Extensions;
@@ -175,6 +175,7 @@
 		1182A32626D5DAF0009F3636 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				116534FE26966E6A00632D65 /* Colors.swift */,
 				1117185E2672799F00BFD235 /* SceneDelegate.swift */,
 				1117185C2672799F00BFD235 /* AppDelegate.swift */,
 				11171867267279A000BFD235 /* LaunchScreen.storyboard */,
@@ -183,27 +184,21 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
-		11873CB8267817E600C6CD41 /* Controller */ = {
+		11873CB8267817E600C6CD41 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				11A0C5CD2713B6600026172F /* TabBarViewController.swift */,
-				114A534A2713BF56008C467B /* NavigationViewController.swift */,
-				111718602672799F00BFD235 /* CalendarViewController.swift */,
-				11873CBA2678184000C6CD41 /* SitesEarningsViewController.swift */,
-				110EF1DC26799BB500AEBD04 /* SettingsViewController.swift */,
-				1198D9A42679A523000BC7E3 /* SitesSettingsViewController.swift */,
-				1198D9A82679BA4B000BC7E3 /* AddSiteViewController.swift */,
-				11E0D10426955DC5001B8658 /* TypeOfEarningViewController.swift */,
-				11A5A237268A9BD100BFEA0E /* StatisticsViewController.swift */,
-				9722AFB026D4755C003C661F /* CalculatorViewController.swift */,
+				11F9E47C2715561A0072C8CD /* Calendar */,
+				11F9E47D271556430072C8CD /* Statistic */,
+				11F9E47E2715565A0072C8CD /* Calculator */,
+				11F9E47F271556710072C8CD /* Settings */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		11873CB9267817EE00C6CD41 /* View */ = {
+		11873CB9267817EE00C6CD41 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				111718622672799F00BFD235 /* Main.storyboard */,
 				11887C3A26727D7500150119 /* DateCell.swift */,
 				11873CBC2678186500C6CD41 /* SiteCell.swift */,
 				110EF1E026799FFF00AEBD04 /* SettingsCell.swift */,
@@ -212,7 +207,52 @@
 				11E0D10226955D99001B8658 /* TypeOfEarningsCell.swift */,
 				1198D9B0267C2559000BC7E3 /* ImageCell.swift */,
 			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		11F9E47B271554EF0072C8CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				111718622672799F00BFD235 /* Main.storyboarda */,
+			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		11F9E47C2715561A0072C8CD /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				111718602672799F00BFD235 /* CalendarViewController.swift */,
+				11873CBA2678184000C6CD41 /* SitesEarningsViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		11F9E47D271556430072C8CD /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				11A5A237268A9BD100BFEA0E /* StatisticsViewController.swift */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
+		11F9E47E2715565A0072C8CD /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9722AFB026D4755C003C661F /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		11F9E47F271556710072C8CD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				114A534A2713BF56008C467B /* NavigationViewController.swift */,
+				110EF1DC26799BB500AEBD04 /* SettingsViewController.swift */,
+				1198D9A42679A523000BC7E3 /* SitesSettingsViewController.swift */,
+				1198D9A82679BA4B000BC7E3 /* AddSiteViewController.swift */,
+				11E0D10426955DC5001B8658 /* TypeOfEarningViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		4C87D461CC887511C4756648 /* Pods */ = {
@@ -293,7 +333,7 @@
 			files = (
 				11171869267279A000BFD235 /* LaunchScreen.storyboard in Resources */,
 				11171866267279A000BFD235 /* Assets.xcassets in Resources */,
-				111718642672799F00BFD235 /* Main.storyboard in Resources */,
+				111718642672799F00BFD235 /* Main.storyboarda in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,12 +426,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		111718622672799F00BFD235 /* Main.storyboard */ = {
+		111718622672799F00BFD235 /* Main.storyboarda */ = {
 			isa = PBXVariantGroup;
 			children = (
 				111718632672799F00BFD235 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main.storyboarda;
 			sourceTree = "<group>";
 		};
 		11171867267279A000BFD235 /* LaunchScreen.storyboard */ = {

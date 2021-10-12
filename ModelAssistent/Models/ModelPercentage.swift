@@ -16,8 +16,8 @@ class ModelPercentage: Object {
         }
     }
     
-    static let percentage: Int = {
-        guard let percentage = MyRealm.realm.objects(ModelPercentage.self).first?.percentage else {return 100}
-        return percentage
+    static var modelPercentage: Int = {
+        return MyRealm.realm.objects(ModelPercentage.self).first!.percentage
     }()
+    
 }

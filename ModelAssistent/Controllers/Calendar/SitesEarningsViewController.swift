@@ -192,7 +192,7 @@ extension SitesEarningsViewController: UITableViewDelegate, UITableViewDataSourc
             
             cell.configureSiteCellifEdit(data: sitesForTableIfEdit[indexPath.row])
             self.hoursOnlineTextField.text = NSNumber(value: sitesForTableIfEdit.first?.hoursOnline ?? 0).stringValue
-            self.percentageTextField.text = "\(sitesForTableIfEdit.first?.percentage ?? ModelPercentage.percentage)"
+            self.percentageTextField.text = "\(sitesForTableIfEdit.first?.percentage ?? ModelPercentage.modelPercentage)"
             
         } else { cell.configureSiteCell(data: sitesForTable[indexPath.row]) }
         

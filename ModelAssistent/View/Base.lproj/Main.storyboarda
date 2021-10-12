@@ -1451,7 +1451,7 @@
         <!--Конвертер-->
         <scene sceneID="G8s-0i-KSJ">
             <objects>
-                <viewController id="yb2-gT-RDv" customClass="CalculatorViewController" customModule="ModelAssistent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calculatorVC" id="yb2-gT-RDv" customClass="CalculatorViewController" customModule="ModelAssistent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIR-nw-uEO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -16,8 +16,6 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var todayButton: UIButton!
     @IBOutlet var statsViews: [UIView]!
     
-
-    
     var calendar: Calendar = {
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone.current
@@ -60,7 +58,6 @@ class CalendarViewController: UIViewController {
     
     func viewSetup() {
 
-        
         self.monthLabel.textColor = Color.shared.hex("#F2B138")
         
         for view in statsViews {

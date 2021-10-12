@@ -23,8 +23,6 @@ class CalculatorViewController: UIViewController {
     
     let currencyArray = ["Tokens", "USD", "EUR", "RUB"]
     
-    lazy var percentage: Int = 0
-    
     var usdRate = 0.0
     var euroRate = 0.0
     
@@ -40,9 +38,7 @@ class CalculatorViewController: UIViewController {
         currencyViewsSetup()
         currencySCsetup()
         
-        settings.delegate = self
         loader.delegate = self
-        
         loader.ratesLoad()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(randomTap))
@@ -52,9 +48,12 @@ class CalculatorViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.percentage = ModelPercentage.percentage
-        percentageLabel.text = String(percentage)
         ratesLabelsSetup(rates: RatesRealm.ratesForCalculator())
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        percentageLabel.text = String(MyRealm.realm.objects(ModelPercentage.self).first?.percentage ?? 100)
     }
     
     @objc func randomTap() {
@@ -103,9 +102,10 @@ class CalculatorViewController: UIViewController {
         }()
         
         let exchageRate = Double(ExchangeRate.exchangeRate)
+        let percentage = MyRealm.realm.objects(ModelPercentage.self).first?.percentage ?? 100
         
         switch currencySC.titleForSegment(at: currencySC.selectedSegmentIndex) {
-        
+            
         case "Tokens":
             
             usdLabel.text = String(format: "%.2f", myValue / 20.0 / 100 * Double(percentage))
@@ -210,13 +210,5 @@ extension CalculatorViewController: RatesDelegate {
         
         self.euroRateLabel.text = String(rates["EUR"] ?? 0.0)
         self.usdRateLabel.text = String(rates["USD"] ?? 0.0)
-    }
-}
-
-extension CalculatorViewController: PercentageDelegate {
-    func percentageUpdate(percentage: Int) {
-        self.percentage = percentage
-        percentageLabel.text = String(percentage)
-        print("HELLO")
     }
 }

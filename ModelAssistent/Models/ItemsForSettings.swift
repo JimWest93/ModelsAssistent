@@ -14,7 +14,7 @@ class ItemsForSettings {
         
         return [ SettingItem(name: "Настройка сайтов", infoLableIsHidden: true, infoLableText: ""),
                  SettingItem(name: "Процент по умолчанию", infoLableIsHidden: false, infoLableText:
-                                "\(ModelPercentage.percentage)%"),
+                                "\(ModelPercentage.modelPercentage)%"),
                  SettingItem(name: "Кросс-курс евро к доллару", infoLableIsHidden: false, infoLableText: "\(ExchangeRate.exchangeRate)")
                  
         ]
